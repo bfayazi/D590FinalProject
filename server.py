@@ -22,12 +22,12 @@ def home():
 @app.route('/result', methods=['POST'])
 def result():
     # Retrieve the selected value from the form submission
-    selected_song = request.form['songs']
+    selected_song_index = request.form['songs']
 
     # Get song info that user selected. The index comes in as a string, so convert to an int to find it
-    song_info = [song for song in song_data if song.get('Index') == int(selected_song)]
+    song_info = [song for song in song_data if song.get('Index') == int(selected_song_index)]
 
-    print (song_info)
+    # Call the model to get recommended songs
 
     # Render a new page with the selected value
     return render_template('result.html', song_data=song_data, selected_song_info=song_info)
