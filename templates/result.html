@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Song Recommendations Results</title>
+</head>
+<body>
+
+    <h1>Song Recommendations</h1>
+
+    <p>You searched for recommendations based on:<br><br>
+        <ul>
+           <li><b>{{ selected_song_info[0].get('Title') }} by {{ selected_song_info[0].get('Artist') }}</b>
+         
+         <br>Genre: {{ selected_song_info[0].get('Top Genre') }}
+
+            </li>
+        </ul>
+        
+    </p>
+</body>
+</html>
