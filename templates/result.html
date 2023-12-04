@@ -9,9 +9,9 @@
 
     <p>You searched for recommendations based on:<br><br>
         <ul>
-           <li><b>{{ selected_song_info[0].get('Title') }} by {{ selected_song_info[0].get('Artist') }}</b>
+           <li><b>{{ selected_song_info.get('Title') }} by {{ selected_song_info.get('Artist') }}</b>
          
-         <br>Genre: {{ selected_song_info[0].get('Top Genre') }}
+         <br>Genre: {{ selected_song_info.get('Top Genre') }}
 
             </li>
         </ul>
@@ -19,7 +19,17 @@
 
     Here are your recommended songs:
 
-    
+    <ul>
+    {% for s,a,g in zip(similar_song_names,similar_song_artists,similar_song_genres) %}
+
+        <li>
+        {{ s }} by {{ a }} Genre: {{ g }} 
+        </li>
+
+    {% endfor %}
+    </ul>
+
+
     </p>
 </body>
 </html>
