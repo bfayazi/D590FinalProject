@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>About this project</h1>
+
+
+    <p>This project was created by a group of students for a National Language Processing class in an online Masters of Data Science
+        program offered by Indiana University in the fall of 2023.
+
+        Team members:
+        <ul>
+            <li><a href='mailto:ajflynn@iu.edu' target="_blank">Aimee Flynn</a></li>
+            <li><a href='mailto:bfayazi@iu.edu' target="_blank">Barza Fayazi-Azad</a></li>
+            <li><a href='mailto:pdm1@iu.edu' target="_blank">Paul Miller</a></li>
+        </ul>
+        </p><br/><br/>
+
+
+    <h2>Objectives</h2>
+        <p>
+Create a music recommendation engine that users provide criteria to, which returns a list of songs that match the criteria that the user provided to them. 
+The main problem we are looking to solve is the issue where a user is not being given music recommendations that 100% mean their tastes and preferences. 
+With our recommendation engine, a user should be able to provide a song title, artist, or even genre that they like, and our recommendation engine will 
+return a list of songs that match what they are looking for given the criteria provided. </p>
+
+    <br/><br/>
+    <h2>Data</h2>
+
+        <p>
+Data will be sourced from an existing Kaggle dataset which contains information on the top 2000 songs.<br/>
+Source: <a href='https://www.kaggle.com/datasets/iamsumat/spotify-top-2000s-mega-dataset/'>Spotify dataset on Kaggle</a><br/><br/>
+
+
+After extracting from a .zip file, the data is contained in a .csv file containing 1994 records. 
+<br/><br/>
+
+Each row has the following data fields:  
+'Index', 'Title', 'Artist', 'Top Genre', 'Year', 'Beats Per Minute (BPM)', 'Energy', 'Danceability', 'Loudness (dB)', 'Liveness', 'Valence', 'Length (Duration)', 'Acousticness', 'Speechiness', 'Popularity' 
+<br/><br/>
+
+Data for this project will consist of only the Title, Artist and Top Genre fields. All other columns contain numeric characteristics for each song which are not relevant. 
+</p>
+
+
+    <br/><br/>
+    <h2>GitHub Repository</h2>
+    <p>More information can be found in our <a href='https://github.com/bfayazi/D590FinalProject'>GitHub repository</a></p>
+
+    <br/><br/>
+    <br/><br/>
+{% endblock %}

@@ -17,7 +17,8 @@ df.sort_values(by='Title', inplace=True)
 song_data=df.to_dict(orient='records')
 
 # Load similarity matrix which was saved from notebook
-sim_matrix_df = pd.read_csv('notebooks/similarity_df.csv', header=0)
+# After saving it was moved manually to the data folder
+sim_matrix_df = pd.read_csv('data/similarity_df.csv', header=0)
 
 print(sim_matrix_df.head())
 
@@ -85,6 +86,16 @@ def result():
                            similar_song_artists=similar_song_artists,
                            similar_song_genres=similar_song_genres,
                            zip=zip)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+# Define the about page route
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 
 if __name__ == '__main__':

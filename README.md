@@ -1,6 +1,12 @@
 # D590 Final Project
 This is the repository for Group 6's Final Project, a song recommendation system.
 
+Team members:
+- Aimee Flynn
+- Barza Fayazi-Azad
+- Paul Miller
+
+
 ## Project Description 
 
 ### Objectives 

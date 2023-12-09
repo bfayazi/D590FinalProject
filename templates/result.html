@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Song Recommendations Results</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
 
     <h1>Song Recommendations</h1>
 
@@ -31,5 +28,20 @@
 
 
     </p>
-</body>
-</html>
+
+    Use the dropdown to select another song to create recommendations:
+    <br/><br/>
+    <form action="/result" method="post">
+
+        <label for="songs">Song choices:</label>
+        <select id="songs" name="songs">
+    
+            {% for song in song_data %}
+                <option value="{{song.Index}}"> {{ song.Title }} by {{song.Artist }} (Genre: {{song['Top Genre']}})</option>
+            {% endfor %}
+    
+        </select>
+        <br/><br/>
+        <input type="submit" value="Recommend songs">
+
+{% endblock %}
